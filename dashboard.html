@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card List</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh; /* 100% of the viewport height */
+            /* Add other styles as needed */
+        }
+         /* Basic CSS for the top navigation */
+         .navbar {
+            background-color: #333; /* Background color for the navbar */
+            overflow: hidden; /* Clear floats inside the navbar */
+        }
+
+        .navbar div {
+            height: 50px; /* Adjust the height as needed for your logo */
+            padding: 10px; /* Add some padding around the logo */
+            float: left; /* Float the logo to the left */
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 400px; /* Adjust the width as needed */
+            font-size: 16px;
+        }
+
+        .menu-button {
+            height: 70px; /* Adjust the height as needed for your logo */
+            float: right; /* Float the menu button to the right */
+            padding: 10px; /* Add some padding around the button */
+            background-color: #333; /* Background color for the button */
+            color: white; /* Text color for the button */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor on hover */
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container aside {
+            width: 20%; /* Adjust the width as needed */
+            background-color: #333; /* Background color for the sidebar */
+            color: white; /* Text color */
+            padding: 30px;
+            height: 100vh;
+        }
+
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .container li {
+            margin-bottom: 40px;
+            margin-top: 40px;
+            margin-right: 40px;
+        }
+
+        .container a {
+            text-decoration: none;
+            color: white;
+            font-family: "Times New Roman", serif;
+        }
+
+        .section {
+            background-color: #f0f0f0; /* Background color for the section */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 26px; /* Adjust the font size as needed */
+            text-align: left; /* Center-align the title */
+            color: #333; /* Text color */
+            margin-top: 20px; /* Add margin to separate from other content */
+            margin-left: 20px; /* Add margin to separate from other content */
+            /* Add other styles as needed */
+        }
+
+        .bar {
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px 20px;
+        }
+
+        .sort-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 10px 20px;
+        }
+
+        .blue-button {
+            background-color: #6297cf; /* Blue color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .gray-button {
+            background-color: #ccc; /* Gray color */
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sort {
+            color: black;
+            border: none;
+            padding: 10px;
+        }
+
+        .card-list {
+            background-color: #f0f0f0; /* Background color for the section */
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .logo {
+            font-family: "Times New Roman", serif;
+            font-size: 36px;
+            color: #bdb5b5; /* Adjust the color as needed */
+            width: 17%; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            Tutelapp
+            <span class="legal-icon">⚖️</span> 
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+        <button class="menu-button">Menu</button>
+    </div>
+
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tutelas completadas</a></li>
+                <li><a href="#">Crear Tutela</a></li>
+                <li><a href="#">Tutelas en proceso</a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </aside>
+        <section class="section">
+            <h1 class="title">Tutelas</h1>
+            <div class="bar">
+                <div class="filter-bar">
+                <button class="blue-button">Todas</button>
+                <button class="gray-button">Enviadas (12)</button>
+                <button class="gray-button">Revisadas (5)</button>
+                <button class="gray-button">Completas (1)</button>
+            
+        </div>
+        <div class="sort-bar">
+            <span class="sort">Sort:</span> 
+            <button class="gray-button">Fecha</button>
+
+        </div>
+        </div>
+        <section class="card-list">
+
+            <div class="card">
+                <h2>Tutela Servicios de Salud IPS Bienestar</h2>
+                <p>05/06/2023</p>
+                <p>A nombre de: Pepito Perez Camacho</p>
+                <p>Aprobada por: Abogado Fabián Sánchez</p>
+                <p>Revisada por: Abogado Andrés Mendéz</p>
+            </div>
+            <div class="card">
+                <h2>Tutela expedición cédula</h2>
+                <p>02/06/2022</p>
+                <p>A nombre de: Vera Rodriguéz</p>
+                <p>Aprobada por: Abogado Fabián Sánchez</p>
+                <p>Revisada por: Abogado Andrés Mendéz</p>
+            </div>
+            <div class="card">
+                <h2>Autorización medicamentos</h2>
+                <p>02/06/2022</p>
+                <p>A nombre de: Vera Rodriguéz</p>
+                <p>Aprobada por: Abogado Fabián Sánchez</p>
+                <p>Revisada por: Abogado Andrés Mendéz</p>
+            </div>
+        </section>
+    </section>
+    </div>
+</body>
+</html>
